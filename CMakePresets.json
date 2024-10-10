@@ -1,0 +1,49 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "macos-clang-arm64",
+            "hidden": false,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_VERBOSE_MAKEFILE": "ON"
+            },
+            "architecture": {
+                "value": "arm64",
+                "strategy": "explicit"
+            },
+            "vendor": {
+                "apple.com/Clang/1.0": {
+                    "hostOS": [ "macOS" ]
+                }
+            }
+        },
+        {
+            "name": "macos-clang-arm64-debug",
+            "inherits": "macos-clang-arm64",
+            "displayName": "macOS Clang ARM64 Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "macos-clang-arm64-release",
+            "inherits": "macos-clang-arm64",
+            "displayName": "macOS Clang ARM64 Release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "macos-clang-arm64-relwithdebinfo",
+            "inherits": "macos-clang-arm64",
+            "displayName": "macOS Clang ARM64 RelWithDebInfo",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+            }
+        }
+    ]
+}
+
