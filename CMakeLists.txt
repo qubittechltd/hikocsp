@@ -55,13 +55,13 @@ target_include_directories(hikocsp-lib INTERFACE
     "$<INSTALL_INTERFACE:include>"
 )
 
-add_executable(hikocsp main.cpp)
-target_link_libraries(hikocsp hikocsp-lib)
-target_link_libraries(hikocsp fmt::fmt)
+add_executable(hikocsp-bin main.cpp)
+target_link_libraries(hikocsp-bin hikocsp-lib)
+target_link_libraries(hikocsp-bin fmt::fmt)
 if(LINUX)
     target_compile_definitions(hikocsp PUBLIC FMT_HEADER_ONLY)
 endif()
-# set_target_properties(hikocsp-bin PROPERTIES OUTPUT_NAME hikocsp)
+set_target_properties(hikocsp-bin PROPERTIES OUTPUT_NAME hikocsp)
 
 
 if(HIKO_BUILD_TESTING AND OFF)
