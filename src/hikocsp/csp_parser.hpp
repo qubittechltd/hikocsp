@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "generator.hpp"
-#include "csp_error.hpp"
-#include "csp_token.hpp"
+#include "hikocsp/generator.hpp"
+#include "hikocsp/csp_error.hpp"
+#include "hikocsp/csp_token.hpp"
 #include <string_view>
 #include <filesystem>
 #include <cstdint>

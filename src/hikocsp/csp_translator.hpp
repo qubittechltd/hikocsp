@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include "csp_token.hpp"
-#include "generator.hpp"
+#include "hikocsp/csp_token.hpp"
+#include "hikocsp/generator.hpp"
 #include <filesystem>
 #include <string>
 #include <string_view>
