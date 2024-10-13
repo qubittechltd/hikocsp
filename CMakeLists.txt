@@ -59,7 +59,7 @@ add_executable(hikocsp-bin main.cpp)
 target_link_libraries(hikocsp-bin hikocsp-lib)
 target_link_libraries(hikocsp-bin fmt::fmt)
 if(LINUX)
-    target_compile_definitions(hikocsp PUBLIC FMT_HEADER_ONLY)
+    target_compile_definitions(hikocsp-bin PUBLIC FMT_HEADER_ONLY)
 endif()
 set_target_properties(hikocsp-bin PROPERTIES OUTPUT_NAME hikocsp)
 
