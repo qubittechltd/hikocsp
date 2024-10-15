@@ -14,6 +14,7 @@ if(APPLE)
 include_directories(/opt/homebrew/include)
 endif()
 
+
 # disable adding CTest build targets like "NightlyStart" (before ctest include)
 set_property(GLOBAL PROPERTY CTEST_TARGETS_ADDED 1)
 include(CTest)
@@ -35,7 +36,7 @@ include(CTest)
 
 set(HIKOCSP_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/hikocsp")
 set(HIKOCSP_EXAMPLES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/examples/")
-
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 add_library(hikocsp-lib INTERFACE)
 set_target_properties(hikocsp-lib PROPERTIES DEBUG_POSTFIX "d")
